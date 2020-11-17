@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,100&display=swap");
+@import url(../css/stylesheetP.css);
+@import url(/css/stylesheet.css);
+@import url(../css/scard.css);
+body {
+  background-color: white;
+  font-family: Piazzolla;
+  background-image: url("../images/back.jpg");
+}
+h1 {
+  color: #1d3f5f;
+  text-decoration: underline;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color: gray;
+}
+nav a:hover {
+  color: white;
+}

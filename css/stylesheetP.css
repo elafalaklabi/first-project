@@ -1,0 +1,108 @@
+@import url(../css/main.css);
+.gridP {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: 50px 100px auto auto;
+  grid-gap: 60px;
+  margin: 0;
+  grid-template-areas:
+    "nav nav"
+    "hd hd"
+    "post auth"
+    "Social Social";
+}
+.nav {
+  grid-area: nav;
+  margin-bottom: 11px;
+  background-color: RGB(133, 206, 219, 75);
+  padding-top: 5px;
+  grid-row: 1;
+  grid-column: 1/3;
+}
+header {
+  grid-area: hd;
+  text-align: center;
+  grid-row: 1/1;
+  margin-top: 90px;
+  font-size: 1.5rem;
+}
+.AuthorInfo {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  padding-left: 0.5vw;
+  flex-direction: column;
+  border-radius: 7px;
+  box-shadow: 3px 3px rgb(223, 218, 218);
+  background-color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: grey;
+  grid-area: auth;
+}
+img {
+  width: 60px;
+}
+h2 {
+  font-size: 2rem;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 0.5vw;
+  box-shadow: 5px 1px 5px 1px #888793;
+  border-radius: 10px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: grey;
+  grid-area: post;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+#web {
+  width: 100%;
+  height: 80%;
+}
+figure {
+  padding-right: 100px;
+}
+figcaption {
+  font-size: 10px;
+}
+.Social {
+  display: flex;
+  flex-direction: column;
+  grid-area: Social;
+  justify-content: left;
+  align-items: flex-start;
+  color: gray;
+  text-decoration-color: #082947;
+  font-size: 1rem;
+}
+p {
+  font-size: 1rem;
+}
+#simg {
+  width: 3vw;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .gridP {
+    grid-template: 1fr 250px;
+    grid-template-rows: 50px 100px 600px 750px 50px;
+    grid-template-areas: "nav nav" "hd hd" "auth auth" "post post" "Social Social";
+  }
+}
+@media (min-width: 601px) and (max-width: 1280px) {
+  .gridP {
+    grid-template: 1fr 250px;
+    grid-template-rows: 50px 100px auto auto;
+  }
+}

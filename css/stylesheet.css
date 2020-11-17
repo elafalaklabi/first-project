@@ -1,0 +1,96 @@
+@import url("../css/main.css");
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 70px 70px 650px 650px 50px;
+  height: 80vw;
+  justify-content: center;
+  grid-gap: 40px;
+  grid-template-areas:
+    "nav nav nav nav" "h1 h1 h1 h1"
+    "fcard fcard fcard fcard" "scard scard scard scard"
+    "footer footer footer footer";
+}
+.nav {
+  grid-area: nav;
+  grid-column: 1/5;
+  margin-bottom: 30px;
+  background-color: RGB(133, 206, 219, 75);
+  padding-top: 5px;
+}
+.h1 {
+  grid-area: h1;
+  text-align: center;
+  font-size: 4.5vw;
+  grid-row: 1/1;
+  margin-top: 90px;
+}
+.fcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: flex-start;
+  padding-left: 1vw;
+  box-shadow: 3px 3px rgb(223, 218, 218);
+  border-radius: 25px;
+  grid-area: fcard;
+  grid-column: 1/4;
+  background-color: rgb(243, 240, 240);
+}
+.scard {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: flex-start;
+  padding-left: 1vw;
+  box-shadow: 3px 3px rgb(223, 218, 218);
+  border-radius: 25px;
+  grid-area: scard;
+  grid-column: 1/4;
+  background-color: rgb(243, 240, 240);
+}
+h2 {
+  font-size: 3vw;
+}
+button {
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  background-color: (133, 206, 219);
+  font-size: 17px;
+  width: 100px;
+  height: 30px;
+  font-family: Piazzolla;
+  background-color: rgb(133, 206, 219);
+  color: white;
+  margin-top: 12px;
+}
+button a:hover {
+  color: white;
+}
+p {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: grey;
+  font-size: 2.2vw;
+}
+footer {
+  grid-area: footer;
+}
+@media (min-width: 300px) and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px 0px 230px 240px 50px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 0px 360px 360px 50px;
+  }
+  .nav {
+    margin-bottom: 60px;
+  }
+}
